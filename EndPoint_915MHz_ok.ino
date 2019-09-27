@@ -9,7 +9,7 @@
 #include <HardwareSerial.h>
 #include <TinyGPS++.h>
 #include "DHTesp.h"
-#include <TheThingsNetwork.h>
+//#include <TheThingsNetwork.h>
 #include <CayenneLPP.h>
 
 #include "lmic.h"
@@ -43,6 +43,7 @@ int dhtPin = 13;
 
 // CayenneLpp instance
 CayenneLPP lpp(51);
+DynamicJsonDocument jsonBuffer(512);
 
 // General variables
 char device[8];
