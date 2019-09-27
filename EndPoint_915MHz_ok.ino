@@ -99,7 +99,6 @@ static const u1_t PROGMEM DEVEUI[8]={ /* TTN Device EUI */ };
 // This key should be in big endian format (or, since it is not really a
 // number but a block of memory, endianness does not really apply). In
 // practice, a key taken from ttnctl can be copied as-is.
-// The key shown here is the semtech default key.
 // Choose MSB mode
 static const u1_t PROGMEM APPKEY[16] = { /* TTN same as Network Section Key */ };
 
