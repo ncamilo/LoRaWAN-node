@@ -4,8 +4,8 @@
 // Copyright (c) 2015 Thomas Telkamp and Matthijs Kooijman
 
 #include <Arduino.h>
-// Tentativa de ligação do GPS
 #include <dummy.h>  // silence warnings from Arduino IDE
+// GPS e Sensor
 #include <HardwareSerial.h>
 #include <TinyGPS++.h>
 #include "DHTesp.h"
@@ -295,7 +295,7 @@ bool getTemperature() {
     return false;
   }
   #ifdef DEBUG
-    Serial.println(" T:" + String(newValues.temperature) + " H:" + String(newValues.humidity));
+    Serial.println("Temp:" + String(newValues.temperature) + "C Umidade:" + String(newValues.humidity));
   #endif
   
   return true;
@@ -327,7 +327,7 @@ void setup() {
     GPSSerial.setTimeout(2);
 
     display.init ();
-    //display.flipScreenVertically();
+    //display.flipScreenVertically(); // Adjust display orientation
     display.setFont (ArialMT_Plain_10);
     display.setTextAlignment (TEXT_ALIGN_LEFT);
     display.drawString (0, 0, "Starting....");
