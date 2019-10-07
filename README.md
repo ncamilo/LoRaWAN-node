@@ -4,43 +4,42 @@ Source code for LoRaWAN node with ESP32.
 Para criar um acesso de um nó na rede TTN (The Things Network) proceda da seguinte forma:
 
 1.	Acesse o site: https://www.thethingsnetwork.org/
-![TTN - login](https://user-images.githubusercontent.com/8071543/66339735-1e670400-e91a-11e9-8320-912501b7b63f.png)
+<img src="(https://user-images.githubusercontent.com/8071543/66339735-1e670400-e91a-11e9-8320-912501b7b63f.png" width="800"><BR>
 
 2.	Clique em Sign Up, crie uma conta e faça a ativação da conta no e-mail indicado.
 3.	Faça o Login e clique em Console:<BR>
-![TTN - Console](https://user-images.githubusercontent.com/8071543/66339772-363e8800-e91a-11e9-9e26-e0beb767aafe.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66339772-363e8800-e91a-11e9-9e26-e0beb767aafe.png" width="800"><BR>
 4.	Na tela do Console clique em Applications<BR>
-![TTN - Add application](https://user-images.githubusercontent.com/8071543/66340029-c086ec00-e91a-11e9-9822-ecc2ddd8d197.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66340029-c086ec00-e91a-11e9-9822-ecc2ddd8d197.png" width="800"><BR>
 5.	Clique em add application<BR>
-![TTN - Add application button](https://user-images.githubusercontent.com/8071543/66340071-d4cae900-e91a-11e9-966d-488ee0917d2d.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66340071-d4cae900-e91a-11e9-966d-488ee0917d2d.png" width="800"><BR>
 6.	Preencha os campos<BR>
 a.	Application ID: nome da aplicação.<BR>
 b.	Description: descrição da sua aplicação.<BR>
 c.	Application EUI será adicionado pelo servidor TTN.<BR>
 d.	Handler registration: ttn-handler-brazil.<BR>
 e.	Clique em Add aplication.<BR>
-![TTN - Add application configuration](https://user-images.githubusercontent.com/8071543/66340387-6f2b2c80-e91b-11e9-9384-60424d10a50e.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66340387-6f2b2c80-e91b-11e9-9384-60424d10a50e.png" width="800"><BR>
 7.	Na tela Application overview clique em register device:
-![TTN - Add application overview](https://user-images.githubusercontent.com/8071543/66340505-adc0e700-e91b-11e9-97b8-9ec57d50d7a7.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66340505-adc0e700-e91b-11e9-97b8-9ec57d50d7a7.png" width="800"><BR>
 8.	Preencha os campos:<BR>
 a.	Device ID: identificação do nó.<BR>
 b.	Em Device EUI clique no ícone   para gerar uma chave automaticamente.<BR>
 c.	Clique em Register.<BR>
-![TTN - Add application Register device](https://user-images.githubusercontent.com/8071543/66341132-02b12d00-e91d-11e9-83ec-a14826fc4976.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66341132-02b12d00-e91d-11e9-83ec-a14826fc4976.png" width="800"><BR>
 9.	Existem dois métodos de ativação:<BR>
 a.	OTAA: Over-the-air Activation (Ativação pelo Ar) que é a forma mais segura de se conectar à rede TTN onde o dispositivo faz um procedimento de Join na rede usando um DevAddr (endereço do dispositivo) dinâmico que é associado pela própria rede e as chaves de segurança que também são negociadas pela rede TTN.<BR>
 b.	ABP: em casos devemos codificar o DevAddr e as chaves de segurança no dispositivo, isto é a Activation by Personalization (Ativação por Personalização), este tipo de ativação é mais simples pois não executa o Join e facilita o envio dos dados, sendo assim, vamos utilizar este método de ativação.<BR>
 c.	Para fazer esta configuração na tela Device overview clique em Settings:<BR><BR>
-![TTN - Add application Device Overview](https://user-images.githubusercontent.com/8071543/66341189-1bb9de00-e91d-11e9-9461-870583575c13.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66341189-1bb9de00-e91d-11e9-9461-870583575c13.png" width="800"><BR>
 10.	Já na tela Device settings edite os seguintes itens:<BR>
 a.	Descrição.<BR>
 b.	Clique em ABP.<BR>
 c.	Desmarque a opção Frame Counter Checks.<BR>
 d.	Clique em Save.<BR>
-![Device settings](https://user-images.githubusercontent.com/8071543/66341688-304aa600-e91e-11e9-82e7-b20066a2aaba.png)<BR>
-![TTN - Add application Device settings](https://user-images.githubusercontent.com/8071543/66341301-558ae480-e91d-11e9-8e26-65b35fec83ba.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66341688-304aa600-e91e-11e9-82e7-b20066a2aaba.png" width="800"><BR><BR><BR>
 11.	Chegaremos na tela Device Overview com o Activation method ABP e todas as chaves necessárias para programar nosso nó sensor.<BR>
-![Device overview ABP](https://user-images.githubusercontent.com/8071543/66341951-a6e7a380-e91e-11e9-8abd-2dd2b5c62885.png)<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66341951-a6e7a380-e91e-11e9-8abd-2dd2b5c62885.png width="800"><BR>
 	12.	Na tela Application overview clique em Payloads formats em seguida selecione Cayenne LPP e clique em Save.<BR>
  
 
