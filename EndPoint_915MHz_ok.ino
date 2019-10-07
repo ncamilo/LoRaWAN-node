@@ -5,7 +5,7 @@
 
 #include <Arduino.h>
 #include <dummy.h>  // silence warnings from Arduino IDE
-// GPS e Sensor
+// GPS and Sensors
 #include <HardwareSerial.h>
 #include <TinyGPS++.h>
 #include "DHTesp.h"
@@ -17,23 +17,83 @@
 #include <SPI.h>
 #include <SSD1306.h>
 
+// LED built in
 #define LEDPIN 25
 
+// show debug statements; comment next line to disable debug statements
+//#define DEBUG
+
+// OLED pin mapping
 #define OLED_I2C_ADDR 0x3C
 #define OLED_RESET    16
 #define OLED_SDA      4
 #define OLED_SCL      15
 
-// show debug statements; comment next line to disable debug statements
-//#define DEBUG
-
-// Definição de ABP ou OTA
-#define ABP
-//#define OTA
+// Display LCD instance
+SSD1306 display (OLED_I2C_ADDR, OLED_SDA, OLED_SCL);
 
 // Config freqPlan with TTN_FP_EU868 or TTN_FP_US915 or TTN_FP_AU915
 #define freqPlan TTN_FP_US915
-  
+
+// Definição de ABP ou OTA
+  #define ABP
+//#define OTA
+
+// Config Device End User Identifier  
+static const u1_t PROGMEM DEVEUI[8] = { /* TTN Device EUI */ };
+
+// This EUI must be in little-endian format, so least-significant-byte
+// first. When copying an EUI from ttnctl output, this means to reverse the bytes.
+// This should also be in little endian format, see above.
+// For TTN issued EUIs the last bytes should be 0xD5, 0xB3, 0x70.
+// Chose LSB mode on the console and then copy it here.
+static const u1_t PROGMEM APPEUI[8] = { /* TTN Aplication EUI */ };
+
+// Config device address
+static const u4_t DEVADDR = 0x26010000 /* TTN Device Address */ ; // <-- Change this address for every node!
+
+// LoRaWAN NwkSKey, your network session key, 16 bytes
+static const PROGMEM u1_t NWKSKEY[16] = { /* TTN Network Section Key */ };
+
+// LoRaWAN AppSKey, application session key, 16 bytes
+static const u1_t PROGMEM APPSKEY[16] = { /* TTN App Section Key */ };
+
+// This key should be in big endian format (or, since it is not really a
+// number but a block of memory, endianness does not really apply). In
+// practice, a key taken from ttnctl can be copied as-is.
+// Choose MSB mode
+static const u1_t PROGMEM APPKEY[16] = { /* TTN same as Network Section Key */ };
+
+// Pin mapping
+const lmic_pinmap lmic_pins = {
+    .nss = 18,
+    .rxtx = LMIC_UNUSED_PIN,
+    .rst = 14,
+    //.dio = {26, 33, 32}  // Pins for the Heltec ESP32 Lora board / TTGO Lora32 with 3D metal antenna V1
+    .dio = {26, 34, 35}    // Pins for the Heltec ESP32 Lora board / TTGO Lora32 with 3D metal antenna V2
+};
+
+// Schedule TX every this many seconds (might become longer due to duty
+// cycle limitations).
+const unsigned TX_INTERVAL = 30;
+
+// Definitions OTA or ABP
+#ifdef OTA
+  // These callbacks are only used in over-the-air activation, so they are
+  // left empty here (we cannot leave them out completely unless
+  // DISABLE_JOIN is set in config.h, otherwise the linker will complain).
+  void os_getArtEui (u1_t* buf) { }
+  void os_getDevEui (u1_t* buf) { }
+  void os_getDevKey (u1_t* buf) { }
+#endif
+
+#ifdef ABP
+  // Configure ABP
+  void os_getArtEui (u1_t* buf) { memcpy_P(buf, APPEUI, 8 );}
+  void os_getDevEui (u1_t* buf) { memcpy_P(buf, DEVEUI, 8 );}
+  void os_getDevKey (u1_t* buf) { memcpy_P(buf, APPKEY, 16);}
+#endif
+
 // DHTEsp instance
 DHTesp dht;
 TempAndHumidity newValues;
@@ -51,19 +111,6 @@ unsigned int counter = 0;
 char TTN_response[30];
 static osjob_t sendjob;
 
-// Schedule TX every this many seconds (might become longer due to duty
-// cycle limitations).
-const unsigned TX_INTERVAL = 30;
-
-// Pin mapping
-const lmic_pinmap lmic_pins = {
-    .nss = 18,
-    .rxtx = LMIC_UNUSED_PIN,
-    .rst = 14,
-    //.dio = {26, 33, 32}  // Pins for the Heltec ESP32 Lora board / TTGO Lora32 with 3D metal antenna V1
-    .dio = {26, 34, 35}    // Pins for the Heltec ESP32 Lora board / TTGO Lora32 with 3D metal antenna V2
-};
-
 // GPS Section
 // The TinyGPS++ object
 TinyGPSPlus gps;
@@ -79,51 +126,6 @@ char s[16];                 // used to sprintf for OLED display
 #define GPS_RX 22
 #define GPS_TX 23
 HardwareSerial GPSSerial(1);
-
-// Display LCD instance
-SSD1306 display (OLED_I2C_ADDR, OLED_SDA, OLED_SCL);
-
-// This EUI must be in little-endian format, so least-significant-byte
-// first. When copying an EUI from ttnctl output, this means to reverse the bytes.
-// This should also be in little endian format, see above.
-// For TTN issued EUIs the last bytes should be 0xD5, 0xB3, 0x70.
-// Chose LSB mode on the console and then copy it here.
-static const u1_t PROGMEM APPEUI[8]={ /* TTN Aplication EUI */ }; 
-
-// LoRaWAN NwkSKey, your network session key, 16 bytes
-static const PROGMEM u1_t NWKSKEY[16] = { /* TTN Network Section Key */ };
-
-// Config Device End User Identifier  
-static const u1_t PROGMEM DEVEUI[8]={ /* TTN Device EUI */ };
-
-// This key should be in big endian format (or, since it is not really a
-// number but a block of memory, endianness does not really apply). In
-// practice, a key taken from ttnctl can be copied as-is.
-// Choose MSB mode
-static const u1_t PROGMEM APPKEY[16] = { /* TTN same as Network Section Key */ };
-
-// Config device address
-static const u4_t DEVADDR = 0x /* TTN Device Address */ ; // <-- Change this address for every node!
-
-// LoRaWAN AppSKey, application session key, 16 bytes
-static const u1_t PROGMEM APPSKEY[16] = { /* TTN App Section Key */ };
-
-// Definitions OTA or ABP
-#ifdef OTA
-// These callbacks are only used in over-the-air activation, so they are
-// left empty here (we cannot leave them out completely unless
-// DISABLE_JOIN is set in config.h, otherwise the linker will complain).
-void os_getArtEui (u1_t* buf) { }
-void os_getDevEui (u1_t* buf) { }
-void os_getDevKey (u1_t* buf) { }
-#endif
-
-#ifdef ABP
-// Configure ABP
-void os_getArtEui (u1_t* buf) { memcpy_P(buf, APPEUI, 8 );}
-void os_getDevEui (u1_t* buf) { memcpy_P(buf, DEVEUI, 8 );}
-void os_getDevKey (u1_t* buf) { memcpy_P(buf, APPKEY, 16);}
-#endif
 
 void do_send(osjob_t* j){
 
