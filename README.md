@@ -55,78 +55,14 @@ Com estes softwares todos instalados vamos instalar as bibliotecas necessárias 
 2.	Descompacte os arquivos em uma pasta e copie o conteúdo da pasta arduino-lmic-master para a pasta Documentos/Arduino/libraries do seu computador:<BR>
 <img src="https://user-images.githubusercontent.com/8071543/66392799-45b7e280-e9a7-11e9-868b-af46bc73634e.png" width="800"><BR />
 3.	Abra o arquivo EndPoint_915MHz_ok.ino e vamos inserir as chaves da rede TTN para configuração do nó. Na página Device overview clicamos nos ícones:<BR>
-a.	 <img src="https://user-images.githubusercontent.com/8071543/66392862-6e3fdc80-e9a7-11e9-872c-ff1ef3ac9d71.png" width="40">para alterar para o modo C-style de todas as chaves; <BR>
-b.	 <img src="https://user-images.githubusercontent.com/8071543/66393019-d7275480-e9a7-11e9-922f-d22cee9d1fa4.png" width="40">somente em Application EUI clica-se neste ícone para alterar para o modo LSB; <BR>
-c.	 <img src="https://user-images.githubusercontent.com/8071543/66393056-ed351500-e9a7-11e9-92a3-6d14446093b3.png" width="40">ajuda a copiar a chave para ser colada no programa do nó:<BR>
-
-As chaves são mostradas como podemos ver na figura a seguir:<BR>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4.	Podemos ver as chaves copiadas na próxima figura:<BR>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5.	Clique no menu Ferramentas/Placa/WiFi LoRa 32(V2) para selecionar o ESP32 LoRa da Heltec, selecione a porta de comunicação correta e depois clique em carregar para fazer o upload do programa para o microcontrolador ESP32, veja o exemplo:<BR>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6.	Finalmente na tela Application data podemos ver o nó trabalhando e enviando os dados para nossa aplicação:<BR>
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+a.	 <img src="https://user-images.githubusercontent.com/8071543/66393325-9bd95580-e9a8-11e9-9aca-1914b4d6362e.png" width="40">para alterar para o modo C-style de todas as chaves; <BR>
+b.	 <img src="https://user-images.githubusercontent.com/8071543/66393367-bf9c9b80-e9a8-11e9-93f5-aa45eb0af34b.png" width="40">somente em Application EUI clica-se neste ícone para alterar para o modo LSB; <BR />
+c.	 <img src="https://user-images.githubusercontent.com/8071543/66393413-db07a680-e9a8-11e9-9243-0e689925b82d.png" width="40">ajuda a copiar a chave para ser colada no programa do nó:<BR />
+As chaves são mostradas como podemos ver na figura a seguir:<BR />
+<img src="https://user-images.githubusercontent.com/8071543/66393549-39348980-e9a9-11e9-84dd-439004d23e0e.png" width="800"><BR />
+4.	Podemos ver as chaves copiadas na próxima figura:<BR />
+<img src="https://user-images.githubusercontent.com/8071543/66393618-67b26480-e9a9-11e9-8434-0bf93586e35d.png" width="800"><BR />
+5.	Clique no menu Ferramentas/Placa/WiFi LoRa 32(V2) para selecionar o ESP32 LoRa da Heltec, selecione a porta de comunicação correta e depois clique em carregar para fazer o upload do programa para o microcontrolador ESP32, veja o exemplo:<BR />
+<img src="https://user-images.githubusercontent.com/8071543/66393692-9597a900-e9a9-11e9-94cd-2af881e112a5.png" width="800"><BR />
+6.	Finalmente na tela Application data podemos ver o nó trabalhando e enviando os dados para nossa aplicação:<BR />
+<img src=https://user-images.githubusercontent.com/8071543/66393933-2a020b80-e9aa-11e9-90f5-771c8ef36ccb.png" width="800"><BR />
