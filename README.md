@@ -1,6 +1,5 @@
 # LoRaWAN-node
 <BR />
-<BR />
 Para criar um acesso de um nó na rede TTN (The Things Network) proceda da seguinte forma:<BR />
 <BR />
 1.	Acesse o site: https://www.thethingsnetwork.org/<BR /><BR />
