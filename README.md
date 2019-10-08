@@ -65,4 +65,4 @@ As chaves são mostradas como podemos ver na figura a seguir:<BR />
 5.	Clique no menu Ferramentas/Placa/WiFi LoRa 32(V2) para selecionar o ESP32 LoRa da Heltec, selecione a porta de comunicação correta e depois clique em carregar para fazer o upload do programa para o microcontrolador ESP32, veja o exemplo:<BR />
 <img src="https://user-images.githubusercontent.com/8071543/66393692-9597a900-e9a9-11e9-94cd-2af881e112a5.png" width="800"><BR />
 6.	Finalmente na tela Application data podemos ver o nó trabalhando e enviando os dados para nossa aplicação:<BR />
-<img src=https://user-images.githubusercontent.com/8071543/66393933-2a020b80-e9aa-11e9-90f5-771c8ef36ccb.png" width="800"><BR />
+<img src="https://user-images.githubusercontent.com/8071543/66393933-2a020b80-e9aa-11e9-90f5-771c8ef36ccb.png" width="800"><BR />
