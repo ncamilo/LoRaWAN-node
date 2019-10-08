@@ -4,7 +4,7 @@ Source code for LoRaWAN node with ESP32.
 Para criar um acesso de um nó na rede TTN (The Things Network) proceda da seguinte forma:
 
 1.	Acesse o site: https://www.thethingsnetwork.org/
-<img src="(https://user-images.githubusercontent.com/8071543/66339735-1e670400-e91a-11e9-8320-912501b7b63f.png" width="800"><BR>
+<img src="https://user-images.githubusercontent.com/8071543/66339735-1e670400-e91a-11e9-8320-912501b7b63f.png" width="800"><BR>
 
 2.	Clique em Sign Up, crie uma conta e faça a ativação da conta no e-mail indicado.
 3.	Faça o Login e clique em Console:<BR>
@@ -39,26 +39,12 @@ c.	Desmarque a opção Frame Counter Checks.<BR>
 d.	Clique em Save.<BR>
 <img src="https://user-images.githubusercontent.com/8071543/66341688-304aa600-e91e-11e9-82e7-b20066a2aaba.png" width="800"><BR><BR><BR>
 11.	Chegaremos na tela Device Overview com o Activation method ABP e todas as chaves necessárias para programar nosso nó sensor.<BR>
-<img src="https://user-images.githubusercontent.com/8071543/66341951-a6e7a380-e91e-11e9-8abd-2dd2b5c62885.png width="800"><BR>
-	12.	Na tela Application overview clique em Payloads formats em seguida selecione Cayenne LPP e clique em Save.<BR>
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://user-images.githubusercontent.com/8071543/66341951-a6e7a380-e91e-11e9-8abd-2dd2b5c62885.png" width="800"><BR>
+12.	Na tela Application overview clique em Payloads formats em seguida selecione Cayenne LPP e clique em Save.<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66342695-6ab54280-e920-11e9-8333-4a36c8f97c94.png" width="800"><BR>
+<BR><BR>
 Agora que já temos nossa aplicação criada e nosso nó sensor criado podemos passar a parte da programação do nó, para isto foi utilizado um WiFi LoRa 32 versão V2 como microcontrolador, um sensor DHT11 e um módulo GPS para localização como podemos ver no diagrama abaixo:<BR>
- 
+<img src="https://user-images.githubusercontent.com/8071543/66342937-edd69880-e920-11e9-8170-a525ad97945b.png" width="800"><BR>
 Para fazer a programação iremos precisar da IDE Arduino instalada, as bibliotecas do ESP32 e as bibliotecas da Heltec LoRa, podemos ver links para estas instalações abaixo:<BR>
 •	Acesse o endereço https://www.arduino.cc/en/Main/Software para instalar a IDE do Arduino;<BR>
 •	Para instalar as bibliotecas do ESP32 na IDE do Arduino veja o seguinte tutorial: https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/;<BR>
