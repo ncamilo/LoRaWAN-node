@@ -29,7 +29,7 @@ c.	Clique em <i>Register</i>.<BR /><BR />
 9.	Existem dois métodos de ativação:<BR />
 a.	OTAA: <i>Over-the-air Activation</i> (Ativação pelo Ar) que é a forma mais segura de se conectar à rede TTN onde o dispositivo faz um procedimento de <i>Join</i> na rede usando um <i>DevAddr</i> (endereço do dispositivo) dinâmico que é associado pela própria rede e as chaves de segurança que também são negociadas pela rede TTN.<BR />
 b.	ABP: em casos devemos codificar o <i>DevAddr</i> e as chaves de segurança no dispositivo, isto é a <i>Activation by Personalization</i> (Ativação por Personalização), este tipo de ativação é mais simples pois não executa o <i>Join</i> e facilita o envio dos dados, sendo assim, vamos utilizar este método de ativação.<BR />
-c.	Para fazer esta configuração na tela <i>Device overview clique em <i>Settings</i>:<BR /><BR /><BR />
+c.	Para fazer esta configuração na tela <i>Device overview</i> clique em <i>Settings</i>:<BR /><BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66341189-1bb9de00-e91d-11e9-9461-870583575c13.png" width="800"><BR />
 10.	Já na tela <i>Device settings</i> edite os seguintes itens:<BR />
 a.	Descrição.<BR />
