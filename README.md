@@ -19,7 +19,7 @@ c.	<i>Application EUI</i> será adicionado pelo servidor TTN.<BR />
 d.	<i>Handler registration</i>: ttn-handler-brazil.<BR />
 e.	Clique em <i>Add aplication</i>.<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66340387-6f2b2c80-e91b-11e9-9384-60424d10a50e.png" width="800"><BR />
-7.	Na tela <i>Application overview</i> clique em register device:<BR /><BR />
+7.	Na tela <i>Application overview</i> clique em <i>register device</i>:<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66340505-adc0e700-e91b-11e9-97b8-9ec57d50d7a7.png" width="800"><BR />
 8.	Preencha os campos:<BR />
 a.	<i>Device ID</i>: identificação do nó.<BR />
