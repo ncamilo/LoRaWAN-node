@@ -1,5 +1,5 @@
 # LoRaWAN-node
-Source code for LoRaWAN node with ESP32.
+
 
 Para criar um acesso de um nó na rede TTN (The Things Network) proceda da seguinte forma:
 
@@ -48,14 +48,14 @@ Agora que já temos nossa aplicação criada e nosso nó sensor criado podemos p
 Para fazer a programação iremos precisar da IDE Arduino instalada, as bibliotecas do ESP32 e as bibliotecas da Heltec LoRa, podemos ver links para estas instalações abaixo:<BR>
 •	Acesse o endereço https://www.arduino.cc/en/Main/Software para instalar a IDE do Arduino;<BR>
 •	Para instalar as bibliotecas do ESP32 na IDE do Arduino veja o seguinte tutorial: https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/;<BR>
-•	As bibliotecas da placa WiFi LoRa 32 da Heltec podem ser instaladas seguindo o seguinte tutorial: https://docs.heltec.cn/#/en/user_manual/how_to_install_esp32_Arduino;<BR>
-Com estes softwares todos instalados vamos instalar as bibliotecas necessárias para o nó LoRaWAN:<BR>
-1.	Acesse o repositório do projeto em: https://github.com/ncamilo/LoRaWAN-node e faça o download do projeto:<BR>
- 
+•	As bibliotecas da placa WiFi LoRa 32 da Heltec podem ser instaladas seguindo o seguinte tutorial: https://docs.heltec.cn/#/en/user_manual/how_to_install_esp32_Arduino;<BR />
+Com estes softwares todos instalados vamos instalar as bibliotecas necessárias para o nó LoRaWAN:<BR />
+1.	Faça o download deste projeto:<BR>
+<img src="https://user-images.githubusercontent.com/8071543/66392724-11442680-e9a7-11e9-9bf5-18eb476e4db2.png" width="800"><BR />
 2.	Descompacte os arquivos em uma pasta e copie o conteúdo da pasta arduino-lmic-master para a pasta Documentos/Arduino/libraries do seu computador:<BR>
- 
+<img src="https://user-images.githubusercontent.com/8071543/66392799-45b7e280-e9a7-11e9-868b-af46bc73634e.png" width="800"><BR />
 3.	Abra o arquivo EndPoint_915MHz_ok.ino e vamos inserir as chaves da rede TTN para configuração do nó. Na página Device overview clicamos nos ícones:<BR>
-a.	  para alterar para o modo C-style de todas as chaves; <BR>
+a.	 <img src=https://user-images.githubusercontent.com/8071543/66392862-6e3fdc80-e9a7-11e9-872c-ff1ef3ac9d71.png">para alterar para o modo C-style de todas as chaves; <BR>
 b.	  somente em Application EUI clica-se neste ícone para alterar para o modo LSB; <BR>
 c.	  ajuda a copiar a chave para ser colada no programa do nó:<BR>
 
