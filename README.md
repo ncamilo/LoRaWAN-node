@@ -54,9 +54,9 @@ Com estes softwares todos instalados vamos instalar as bibliotecas necessárias 
 2.	Descompacte os arquivos em uma pasta e copie o conteúdo da pasta <i>arduino-lmic-master</i> para a pasta <i>Documentos/Arduino/libraries</i> do seu computador:<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66392799-45b7e280-e9a7-11e9-868b-af46bc73634e.png" width="800"><BR />
 3.	Abra o arquivo <i>EndPoint_915MHz_ok.ino</i> e vamos inserir as chaves da rede TTN para configuração do nó. Na página <i>Device overview</i> clicamos nos ícones:<BR /><BR />
-a.	<img src="https://user-images.githubusercontent.com/8071543/66393325-9bd95580-e9a8-11e9-9aca-1914b4d6362e.png" width="40">para alterar para o modo <i>C-style</i> de todas as chaves;<BR />
-b.	<img src="https://user-images.githubusercontent.com/8071543/66393367-bf9c9b80-e9a8-11e9-93f5-aa45eb0af34b.png" width="40">somente em <i>Application EUI</i> clica-se neste ícone para alterar para o modo <i>LSB</i>; <BR />
-c.	<img src="https://user-images.githubusercontent.com/8071543/66393413-db07a680-e9a8-11e9-9243-0e689925b82d.png" width="40">ajuda a copiar a chave para ser inserida no programa do nó.<BR /><BR />
+<div align="left">a.	<img src="https://user-images.githubusercontent.com/8071543/66393325-9bd95580-e9a8-11e9-9aca-1914b4d6362e.png" width="40">para alterar para o modo <i>C-style</i> de todas as chaves;</div><BR />
+<div align="left">b.	<img src="https://user-images.githubusercontent.com/8071543/66393367-bf9c9b80-e9a8-11e9-93f5-aa45eb0af34b.png" width="40">somente em <i>Application EUI</i> clica-se neste ícone para alterar para o modo <i>LSB</i>;</div><BR />
+<div align="left">c.	<img src="https://user-images.githubusercontent.com/8071543/66393413-db07a680-e9a8-11e9-9243-0e689925b82d.png" width="40">ajuda a copiar a chave para ser inserida no programa do nó.</div><BR /><BR />
 As chaves são mostradas como podemos ver na figura a seguir:<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66393549-39348980-e9a9-11e9-84dd-439004d23e0e.png" width="800"><BR />
 4.	Podemos ver as chaves copiadas na próxima figura:<BR /><BR />
