@@ -23,7 +23,7 @@ e.	Clique em <i>Add aplication</i>.<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66340505-adc0e700-e91b-11e9-97b8-9ec57d50d7a7.png" width="800"><BR />
 8.	Preencha os campos:<BR />
 a.	<i>Device ID</i>: identificação do nó.<BR />
-b.	Em <i>Device EUI</i> clique no ícone <img src="https://user-images.githubusercontent.com/8071543/66399994-00031600-e9b7-11e9-98f8-ae4f069c071d.png" width="40px" height="20px"> para gerar uma chave automaticamente.<BR />
+b.	Em <i>Device EUI</i> clique no ícone <img src="https://user-images.githubusercontent.com/8071543/66399994-00031600-e9b7-11e9-98f8-ae4f069c071d.png" width="40px" height="40px"> para gerar uma chave automaticamente.<BR />
 c.	Clique em <i>Register</i>.<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66341132-02b12d00-e91d-11e9-83ec-a14826fc4976.png" width="800"><BR>
 9.	Existem dois métodos de ativação:<BR />
