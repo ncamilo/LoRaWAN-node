@@ -55,9 +55,9 @@ Com estes softwares todos instalados vamos instalar as bibliotecas necessárias 
 2.	Descompacte os arquivos em uma pasta e copie o conteúdo da pasta arduino-lmic-master para a pasta Documentos/Arduino/libraries do seu computador:<BR>
 <img src="https://user-images.githubusercontent.com/8071543/66392799-45b7e280-e9a7-11e9-868b-af46bc73634e.png" width="800"><BR />
 3.	Abra o arquivo EndPoint_915MHz_ok.ino e vamos inserir as chaves da rede TTN para configuração do nó. Na página Device overview clicamos nos ícones:<BR>
-a.	 <img src=https://user-images.githubusercontent.com/8071543/66392862-6e3fdc80-e9a7-11e9-872c-ff1ef3ac9d71.png">para alterar para o modo C-style de todas as chaves; <BR>
-b.	  somente em Application EUI clica-se neste ícone para alterar para o modo LSB; <BR>
-c.	  ajuda a copiar a chave para ser colada no programa do nó:<BR>
+a.	 <img src="https://user-images.githubusercontent.com/8071543/66392862-6e3fdc80-e9a7-11e9-872c-ff1ef3ac9d71.png" width="40">para alterar para o modo C-style de todas as chaves; <BR>
+b.	 <img src="https://user-images.githubusercontent.com/8071543/66393019-d7275480-e9a7-11e9-922f-d22cee9d1fa4.png" width="40">somente em Application EUI clica-se neste ícone para alterar para o modo LSB; <BR>
+c.	 <img src="https://user-images.githubusercontent.com/8071543/66393056-ed351500-e9a7-11e9-92a3-6d14446093b3.png" width="40">ajuda a copiar a chave para ser colada no programa do nó:<BR>
 
 As chaves são mostradas como podemos ver na figura a seguir:<BR>
  
