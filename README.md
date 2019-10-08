@@ -13,7 +13,7 @@ Para criar um acesso de um nó na rede TTN (The Things Network) proceda da segui
 5.	Clique em <i>add application</i>:<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66340071-d4cae900-e91a-11e9-966d-488ee0917d2d.png" width="800"><BR>
 6.	Preencha os campos:<BR />
-<div margim-left="10px" align="left"><p>a.	<i>Application ID</i>: nome da aplicação.<BR />
+<div margin-left="10px" align="left"><p>a.	<i>Application ID</i>: nome da aplicação.<BR />
 b.	<i>Description</i>: descrição da sua aplicação.<BR />
 c.	<i>Application EUI</i> será adicionado pelo servidor TTN.<BR />
 d.	<i>Handler registration</i>: ttn-handler-brazil.<BR />
