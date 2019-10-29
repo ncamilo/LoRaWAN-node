@@ -4,7 +4,7 @@ Para criar um acesso de um nó na rede TTN (The Things Network) proceda da segui
 <BR />
 1.	Acesse o site: https://www.thethingsnetwork.org/<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66339735-1e670400-e91a-11e9-8320-912501b7b63f.png" width="800"><BR />
-2.	Clique em <i>Sign Up</i>, crie uma conta e faça a ativação da conta no e-mail indicado.
+2.	Clique em <i>Sign Up</i>, crie uma conta e faça a ativação da conta no e-mail indicado.<BR /><BR />
 3.	Faça o <i>Login</i> e clique em <i>Console</i>:<BR /><BR />
 <img src="https://user-images.githubusercontent.com/8071543/66339772-363e8800-e91a-11e9-9e26-e0beb767aafe.png" width="800"><BR>
 4.	Na tela do Console clique em <i>Applications</i>:<BR /><BR />
